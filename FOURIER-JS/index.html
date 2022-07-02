@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gráfico Série de Fourier</title>
+    <meta charset= "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <main>
+      <h1>Gráfico Série de Fourier</h1>
+      <p>
+        criado por David Rodrigues <a href="https://www.linkedin.com/in/davidrodrigues35/">linkedin.com/in/davidrodrigues35/</a> <br>
+        (versão beta)
+      </p> <br>
+
+      <div id='equacao'>
+        `sum_{i=0}^n i^2 = (-b +- sqrt(b^2-4ac))/(2a) .`
+      </div>
+
+      <br>
+
+      <table>
+          <tr>
+            <th>coeficiente A</th>
+            <th><input type="text" id="coefA" value="0" required></th>
+          </tr>
+          <tr>
+            <th>coeficiente B</th>
+            <th><input type="text" id="coefB" value="1/n" required></th>
+          </tr>
+          <tr>
+            <th>constante </th>
+            <th><input type="number" id="cte" value="0.5" required></th>
+          </tr>
+          <tr>
+            <th>número de termos</th>
+            <th><input type="range" id="termos" value="5" min="1" max="50" step="1"><label id="lblTermos"> 5</label></th>
+          </tr>
+      </table>
+
+      <div id="grafico"></div>
+    </main>
+
+    <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
